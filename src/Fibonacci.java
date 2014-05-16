@@ -2,25 +2,7 @@ import java.math.BigInteger;
 
 public class Fibonacci
 {
-    public static void main( String[] args )
-    {
-        Fibonacci fibonacci = new Fibonacci();
-        long digits = 0;
-        BigInteger result = BigInteger.ZERO;
-        BigInteger term = BigInteger.valueOf( 4700 );
-        while ( digits < 1000 )
-        {
-            term = term.add( BigInteger.ONE );
-            result = fibonacci.getFibonacciNumber( term );
-            digits = (result + "").length();
-        }
-        System.out.println("########FINAL###########");
-        System.out.println( term );
-        System.out.println( result );
-        System.out.println( digits );
-    }
-
-    private BigInteger getFibonacciNumber( BigInteger term )
+    public BigInteger getFibonacciNumber( BigInteger term )
     {
         BigInteger result = BigInteger.ZERO;
         if ( isValidTerm( term ) )
